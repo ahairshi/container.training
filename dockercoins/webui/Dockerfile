@@ -1,6 +1,7 @@
 FROM node:4-slim
+WORKDIR /usr/app
 RUN npm install express
-RUN npm install redis@3
+RUN npm install redis
 COPY files/ /files/
 COPY webui.js /
 CMD ["node", "webui.js"]
